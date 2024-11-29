@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starry Night of Love</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Starry Night Mode -->
+      <div id="stars-screen" class="screen active">
+        <div class="starry-night">
+          <!-- Stars will be dynamically inserted here by JS -->
+        </div>
+      </div>
+
+      <!-- Pop-Up -->
+      <div id="star-popup" class="popup hidden">
+        <div class="popup-content">
+          <p id="love-sentence"></p>
+          <button onclick="closePopup()">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

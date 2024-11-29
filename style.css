@@ -1,0 +1,136 @@
+/* General App Styles */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: #1a1a2e;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+
+/* Starry Night Mode */
+.starry-night {
+  background: radial-gradient(circle, #000428, #004e92);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+/* Star Style */
+.star {
+  width: 20px; /* Star size */
+  height: 20px; /* Star size */
+  position: absolute;
+  animation: twinkle 2s infinite ease-in-out;
+  cursor: pointer;
+  opacity: 0.8; /* Make stars visible */
+}
+
+.star.heart {
+  width: 25px;
+  height: 25px;
+  background-color: #ff99ac;
+  clip-path: polygon(50% 0%, 0% 35%, 50% 100%, 100% 35%); /* Heart shape */
+}
+
+.star.sparkle {
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #fff 30%, transparent);
+  border-radius: 50%;
+  box-shadow: 0 0 5px #ff99ac, 0 0 15px #ff99ac, 0 0 30px #ff99ac; /* Glowing effect */
+}
+
+.star.star {
+  width: 25px;
+  height: 25px;
+  background: #ffcc00;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  ); /* Star shape */
+}
+
+/* Twinkle Animation */
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Pop-Up Style */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup-content {
+  background: #ffdee9;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  color: #333;
+  font-size: 1.2em;
+}
+
+button {
+  margin-top: 10px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff4757;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .star {
+    width: 15px; /* Make stars smaller on mobile */
+    height: 15px;
+  }
+
+  .popup-content {
+    width: 80%;
+    font-size: 1em;
+  }
+}
